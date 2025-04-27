@@ -545,6 +545,7 @@ namespace Microsoft.MIDebugEngine
         {
             bool success = false;
             Natvis.Initialize(_launchOptions.VisualizerFiles);
+            Natvis.Initialize();
             int total = 1;
 
             await this.WaitForConsoleDebuggerInitialize(token);
