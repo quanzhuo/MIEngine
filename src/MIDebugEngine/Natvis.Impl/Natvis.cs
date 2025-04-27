@@ -273,6 +273,22 @@ namespace Microsoft.MIDebugEngine.Natvis
             }
         }
 
+        /**
+         * Load natvis files from user home
+         */
+        public void Initialize()
+        {
+            string homeDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string natvisDir = Path.Combine(homeDir, ".visualizers");
+            if (Directory.Exists(natvisDir))
+            {
+                foreach (var file in Directory.GetFiles(natvisDir, "*.natvis"))
+                {
+                    LoadFile(file);
+                }
+            }
+        }
+
         /*
          * Handle multiple Natvis files
          */

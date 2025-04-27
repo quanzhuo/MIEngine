@@ -1780,7 +1780,7 @@ namespace MICore
             {
                 this.VisualizerFiles.AddRange(options.VisualizerFile);
             }
-            this.ShowDisplayString = options.ShowDisplayString.GetValueOrDefault(false);
+            this.ShowDisplayString = options.ShowDisplayString.GetValueOrDefault(true);
 
             this.AdditionalSOLibSearchPath = String.IsNullOrEmpty(this.AdditionalSOLibSearchPath) ?
                 options.AdditionalSOLibSearchPath :
