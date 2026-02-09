@@ -101,6 +101,8 @@ get_dotnet_runtime_id()
                 __RuntimeID=linux-musl-arm64
             fi
         fi
+    elif [ "$(uname -m)" = "loongarch64" ]; then
+        __RuntimeID=linux-loongarch64
     fi
 }
 
